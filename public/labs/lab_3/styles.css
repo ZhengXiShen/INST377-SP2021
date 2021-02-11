@@ -23,7 +23,7 @@
   .carousel img {
     width: 130px;
     height: 130px;
-    /* make it block to remove space around images */
+    
     display: block;
   }
   
