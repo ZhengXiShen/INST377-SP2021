@@ -1,28 +1,24 @@
-/* Put your javascript in here */
-
-
-
-    /* configuration */
-    let width = 130; // image width
-    let count = 3; // visible images count
-
-    let list = carousel.querySelector('ul');
-    let listElems = carousel.querySelectorAll('li');
-
-    let position = 0; // ribbon scroll position
-
-    carousel.querySelector('.left').onclick = function() {
-      // shift left
-      position += width * count;
-      // can't move to the left too much, end of images
-      position = Math.min(position, 0)
-      list.style.marginLeft = position + 'px';
-    };
-
-    carousel.querySelector('.right').onclick = function() {
-      // shift right
-      position -= width * count;
-      // can only shift the ribbbon for (total ribbon length - visible count) images
-      position = Math.max(position, -width * (listElems.length - count));
-      list.style.marginLeft = position + 'px';
-    };
+function arrayImageList(){
+    const pictureArray = [
+    "images/onigiri_1.png",
+    "images/onigiri_2.png",
+    "images/onigiri_3.png",
+    "images/onigiri_4.png",
+    "images/roll_1.png",
+    "images/roll_2.png",
+    "images/roll_3.png",
+    ];
+    
+    const arrayImage = document.createElement('ul');
+    const target = document.querySelector('#carousel');
+    target.append(arrayImage);
+    
+    pictureArray.forEach(element => {
+    const listImage = document.createElement('li');
+    listImage.innerText = element;
+    arrayImage.append(listImage);
+    })
+    }
+    
+    
+    window.onload = arrayImageList;
