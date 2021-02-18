@@ -42,6 +42,11 @@ document.addEventListener('DOMContentLoaded', () =>{
         function moveObstacle() {
             obstacleLeft -= 2
             obstacle.style.left = obstacleLeft + 'px'
+
+            if (obstacleLeft === -58) {
+                clearInterval(timerId)
+                gameDisplay.removeChild(obstacle)
+            }
         }
         let timerId = setInterval(moveObstacle, 20)
     }
