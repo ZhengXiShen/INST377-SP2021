@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const ground = document.querySelector('.ground')
 
     let birdLeft = 220
-    let birdBottom = 100
+    let birdBottom = 120
     let gravity = 2
     let isGameOver = false
 
@@ -56,14 +56,13 @@ document.addEventListener('DOMContentLoaded', () =>{
             }
         }
         let timerId = setInterval(moveObstacle, 20)
-        setTimeout(generateObstacle, 2500)
+        if (!isGameOver) setTimeout(generateObstacle, 2500)
     }
     generateObstacle()
 
 
     function gameOver (){
         clearInterval(gameTimerId)
-        console.log('game over')
         isGameOver = true
         document.removeEventListener('keyup', control)
     }
