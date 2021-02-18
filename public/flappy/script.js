@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     function generateObstacle() {
         let obstacleLeft = 508
-        let randomHeight = Math.random() * 60
+        let randomHeight = Math.random() * 80
         let obstacleBottom = randomHeight
         const obstacle = document.createElement('div')
         obstacle.classList.add('obstacle')
