@@ -48,10 +48,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 clearInterval(timerId)
                 gameDisplay.removeChild(obstacle)
             }
-            if (
-                obstacleLeft > 202 && obstacleLeft < 282 && birdLeft === 222 ||
-                birdBottom === 0
-                ) {
+            if (birdBottom === 0) {
                 gameOver()
             }
         }
