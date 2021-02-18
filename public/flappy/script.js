@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     function generateObstacle() {
         let obstacleLeft = 508
-        let randomHeight = Math.random() * 80
+        let randomHeight = Math.random() * 60
         let obstacleBottom = randomHeight
         const obstacle = document.createElement('div')
         if (!isGameOver) obstacle.classList.add('obstacle')
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             }
             if (
                 obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
-                birdBottom < obstacleBottom + 103||
+                birdBottom < obstacleBottom + 153||
                 birdBottom === 0
                 ) {
                 gameOver()
