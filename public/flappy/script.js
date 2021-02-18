@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () =>{
     const bird = document.querySelector('.bird')
-    const game = document.querySelector('.game-container')
+    const gameDisplay = document.querySelector('.game-container')
     const ground = document.querySelector('.ground')
 
     let birdLeft = 220
