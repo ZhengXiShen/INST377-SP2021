@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             }
             if (
                 obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
-                birdBottom < obstacleBottom + 153||
+                birdBottom < obstacleBottom + 103||
                 birdBottom === 0
                 ) {
                 gameOver()
