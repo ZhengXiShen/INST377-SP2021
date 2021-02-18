@@ -28,4 +28,11 @@ document.addEventListener('DOMContentLoaded', () =>{
         console.log(birdBottom)
     }
     document.addEventListener('keyup', control)
+
+    function generateObstacle() {
+        const obstacle = document.createElement('div')
+        obstacle.classList.add('obstacle')
+        gameDisplay.appendChild(obstacle)
+    }
+    generateObstacle()
 })
