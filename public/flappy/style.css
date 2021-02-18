@@ -3,7 +3,7 @@
 .game-contanier {
     width: 500px;
     height: 730px;
-    position:absolute;
+    position: absolute;
 }
 
 .sky{
@@ -29,7 +29,7 @@
 }
 
 .obstacle {
-    background-color: green;
+    background-color: url('flappybird-pipe.png');
     width: 60px;
     height: 300px;
     position: absolute;
