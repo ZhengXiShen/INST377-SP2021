@@ -1,8 +1,23 @@
+
+
 body, form{
     background-color: green;
   }
   
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   
+  .container * {
+    box-sizing: border-box;
+  }
+  
+  .flex-outer {
+    max-width: 800px;
+    margin: 0 auto;
+  }
   
   .flex-outer li,
   .flex-inner {
