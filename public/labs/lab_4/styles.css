@@ -26,6 +26,10 @@ body, form{
     align-items: center;
   }
   
+  .flex-outer > li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
   .flex-outer > li > label,
   .flex-outer li p {
     flex: 1 0 120px;
