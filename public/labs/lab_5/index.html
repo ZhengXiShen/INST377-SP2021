@@ -1,46 +1,47 @@
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title> Zhengxi Shen Lab 5</title>
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-</head>
+  </head>
 
 
-<body>
-  <div class="column is-one-quarter">
-    <h1 class = "title is-3">Zhengxi Shen Lab 5</h1>
-    <h2 class = "subtitle is-5">Zip Code Food Search</h2>
-    <div class = 'container'>
-        <form class = 'search-form' action = '/api' method = 'get'>
-           <div class = "title is-6 mb-2"><label>Search</label></div> 
-           <div class = 'search-input'><input type="text" class="search" placeholder="Zip Code"></div>
-           <div class = 'submit-button mt-3'><button type="submit" id="submit" name="submit">SUBMIT</button></div>
-        <div class = 'targeted'>
-            <ul class = 'suggestions'>              
-            
-            </ul>
-        </div> 
-        </form>  
-        <div class ="map column is-one-quarter">
-            <div class = "title is-6 mb-2">MAP</div>
-            <div id="mapid" style="width: 575px; height:575px;">
-              
+  <body>
+    <div class="columns m-2">
+      <div class="column is-half">
+        <h1 class="title is-3">Zhengxi Shen Lab 5</h1>
+        <h2 class="subtitle is-5">Zip Code Food Search</h2>
+        <div class='container'>
+          <form class='search-form' action='/api' method='get'>
+            <div class="title is-6 mb-2"><label>Search</label></div>
+            <div class='search-input'><input type="text" class="search" placeholder="Zip Code"></div>
+            <div class='submit-button mt-3'><button type="submit" id="submit" name="submit">SUBMIT</button></div>
+            <div class='targeted'>
+              <ul class='suggestions'>
+
+              </ul>
             </div>
+          </form>
         </div>
-       
-     </div>
+      </div>
+      <div class="column is-half">
+        <div class="title is-6 mb-2">MAP</div>
+        <div id="mapid" style="width: 450px; height:450px;">
+
+        </div>
+      </div>
+
+
+
     </div>
-     
     <script src='script.js'></script>
-</body>
+  </body>
+
 </html>
