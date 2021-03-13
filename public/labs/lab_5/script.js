@@ -41,18 +41,21 @@ async function dataHandler(mapObjectFromFunction) {
     firstFive.forEach((item) => {
       const marker = L.marker([item.geocoded_column_1.coordinates[1], item.geocoded_column_1.coordinates[0]]).addTo(mapObjectFromFunction);
 
-      const appendObj = document.createElement('li');
-      appendObj.classList.add('block');
-      appendObj.classList.add('list-item');
-      appendObj.classList.add('box');
-      appendObj.classList.add('has-background-info');
-      appendObj.classList.add('has-text-warning');
-      appendObj.classList.add('mt-10');
-      appendObj.innerHTML = `<div class="list-header is-size-4">${item.name}</div> 
+      const appendItem = document.createElement('li');
+      appendItem.classList.add('block');
+      appendItem.classList.add('list-item');
+      appendItem.classList.add('box');
+      appendItem.classList.add('has-background-info');
+      appendItem.classList.add('has-text-warning');
+      appendItem.classList.add('mt-10');
+      appendItem.innerHTML = `<div class="list-header is-size-4">${item.name}</div> 
       		<address class="is-size-6"> ${item.address_line_1} </address>`;
-      suggestions.append(appendObj);
+      suggestions.append(appendItem);
 
     });
+    const {coordinates} = firstFive[0]?.geocoded_column_1;
+  console.log('viewSet coords', coordinates);
+  mapObjectFromFunction.panTo([coordinates[1],coordinates[0]], 0);
 
   });
 
